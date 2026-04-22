@@ -85,7 +85,6 @@
 //   console.log("Factorial numbers : ", FactorialNumbers);
 // }
 
-
 // 6. **Sum of All Even Numbers up to N**
 
 //    * Input: `10`
@@ -100,11 +99,10 @@
 //    if(index % 2 === 0){
 //     sumOfEvenNum += index
 //    }
-    
+
 // }
 
 // console.log("Sum of Even Numbers : ", sumOfEvenNum);
-
 
 // 7. **Print Squares of Numbers from 1 to N**
 
@@ -122,7 +120,7 @@
 //     console.log(square);
 //     odd += 2;
 // }
-// fast and reliable 
+// fast and reliable
 // ⚡ Modern Alternative (Better than Math.pow())
 
 // const n = 5;
@@ -141,7 +139,7 @@
 
 // console.log(squares);
 
-
+// Day 2
 
 // 1. **Find the Maximum of Three Numbers**
 
@@ -149,15 +147,109 @@
 //    * Output: `20`
 //    * ✨ *Teaches nested or chained conditional logic and comparative reasoning.*
 
-//  function findMaxNumber(a, b, c) {
+// function findMaxNumber(a, b, c, isOptimize) {
+//   let maxNumber;
+//   if (isOptimize) {
+//     const res = Math.max(a, b, c);
+//     maxNumber = "Max number from Math.max() : " + res;
+//   } else {
 //     if (a >= b && a >= c) {
-//         return a;
+//       maxNumber = a;
 //     } else if (b >= a && b >= c) {
-//         return b;
+//       maxNumber = b;
 //     } else {
-//         return c;
+//       maxNumber = c;
+//     }
+//   }
+
+//   console.log(maxNumber);
+// }
+
+// findMaxNumber(10, 110, 8, true);
+
+// 2. **Check if a Number is Positive, Negative, or Zero**
+
+//    * Input: `-9`
+//    * Output: `Negative`
+//    * ✨ *Practices multi-branch conditions and comparison operators.*
+
+// function checkNumber(num = 0) {
+//     if (num > 0) {
+//         console.log("Positive");
+//     } else if (num < 0) {
+//         console.log("Negative");
+//     } else {
+//         console.log("Zero");
 //     }
 // }
 
-// const max = findMaxNumber(10, 10, 8);
-// console.log("Maximum of three numbers:", max);
+// // Example
+// checkNumber(-1+1+1);  // Output: Negative
+
+// 3. **Calculate Electricity Bill**
+
+// * Input: `Units = 230`
+// * Output: `Total Bill = ₹1500`
+// * ✨ *Applies multiple ranges using chained `else if` and cumulative logic.*
+// * Example Logic:
+
+//   * 0–100 units → ₹5 per unit
+//   * 101–200 units → ₹7 per unit
+//   * 201–300 units → ₹10 per unit
+//   * Above 300 units → ₹12 per unit
+// * 🔍 *Teaches:* cumulative calculation + condition chaining.
+ 
+
+// function calculateElectricBill(units = 0) {
+//   if (units <= 0) {
+//     console.log("wrong units");
+//     return 0;
+//   }
+
+//   let amount = 0;
+
+//   if (units > 300) {
+//     amount += (units - 300) * 12;
+//     units = 300;
+//   }
+
+//   if (units > 200) {
+//     amount += (units - 200) * 10;
+//     units = 200;
+//   }
+
+//   if (units > 100) {
+//     amount += (units - 100) * 7;
+//     units = 100;
+//   }
+
+//   amount += units * 5;
+
+//   return amount;
+// }
+
+// console.log("₹", calculateElectricBill(300)); // 2200
+
+// // optimized production level logic 
+// const slabs = [
+//   { limit: 100, rate: 5 },
+//   { limit: 100, rate: 7 },
+//   { limit: 100, rate: 10 },
+//   { limit: Infinity, rate: 12 },
+// ];
+
+// function calculateBill(units) {
+//   let amount = 0;
+
+//   for (let slab of slabs) {
+//     const used = Math.min(units, slab.limit);
+//     amount += used * slab.rate;
+//     units -= used;
+
+//     if (units <= 0) break;
+//   }
+
+//   return amount;
+// }
+
+// console.log("₹", calculateBill(300)); // 2200
