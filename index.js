@@ -198,7 +198,6 @@
 //   * 201–300 units → ₹10 per unit
 //   * Above 300 units → ₹12 per unit
 // * 🔍 *Teaches:* cumulative calculation + condition chaining.
- 
 
 // function calculateElectricBill(units = 0) {
 //   if (units <= 0) {
@@ -230,7 +229,7 @@
 
 // console.log("₹", calculateElectricBill(300)); // 2200
 
-// // optimized production level logic 
+// // optimized production level logic
 // const slabs = [
 //   { limit: 100, rate: 5 },
 //   { limit: 100, rate: 7 },
@@ -253,3 +252,53 @@
 // }
 
 // console.log("₹", calculateBill(300)); // 2200
+
+// 4. **Check if a Character is a Vowel or Consonant**
+
+//    * Input: `e`
+//    * Output: `Vowel`
+  
+//   const vowels = ["a", "e", "i", "o", "u"];
+
+// function checkVowels(str) {
+//   let accVowels = [];
+//   let accConsonants = [];
+
+//   const checkAlpha = /^[a-z]+$/i;
+
+//   if (!checkAlpha.test(str)) {
+//     console.log("Invalid input");
+//     return;
+//   }
+
+//   const strToArray = str.toLowerCase().split("");
+
+//   for (let i = 0; i < strToArray.length; i++) {
+//     const currentLetter = strToArray[i];
+
+//     if (vowels.includes(currentLetter)) {
+//       accVowels.push(currentLetter);
+//     } else {
+//       accConsonants.push(currentLetter);
+//     }
+//   }
+
+//   return { accVowels, accConsonants };
+// }
+
+// const result = checkVowels("venugopal");
+// console.log(result);
+
+// console.log("Vowels:", result.accVowels);
+// console.log("Consonants:", result.accConsonants);
+
+
+// 5. **Check if a Year is a Leap Year**
+
+//    * Input: `2024`
+//    * Output: `Leap Year`
+//    * ✨ *Builds compound condition logic using multiple `if` statements (`%4`, `%100`, `%400`).*
+
+// function isLeapYear(year) {
+//   return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+// }
