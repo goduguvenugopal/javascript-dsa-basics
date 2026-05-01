@@ -257,7 +257,7 @@
 
 //    * Input: `e`
 //    * Output: `Vowel`
-  
+
 //   const vowels = ["a", "e", "i", "o", "u"];
 
 // function checkVowels(str) {
@@ -292,7 +292,6 @@
 // console.log("Vowels:", result.accVowels);
 // console.log("Consonants:", result.accConsonants);
 
-
 // 5. **Check if a Year is a Leap Year**
 
 //    * Input: `2024`
@@ -301,4 +300,54 @@
 
 // function isLeapYear(year) {
 //   return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+// }
+
+// 1. **Print Right-Angled Star Triangle**
+//    * Input: `Rows = 5`
+//    * Output:
+
+//      ```
+//      *
+//      **
+//      ***
+//      ****
+//      *****
+//      ```
+//    * ✨ *Teaches nested loops and increasing sequence printing.*
+
+// const row = 100;
+ 
+// for (let i = 1; i <= row; i++) {
+//   let str = "";
+//   for (let j = 1; j <= i; j++) {
+//     str = str + "*";
+//   }
+//   console.log(str);
+// }
+
+
+
+// 2. **Print Inverted Right-Angled Triangle**
+
+//    * Input: `Rows = 5`
+//    * Output:
+
+//      ```
+//      *****
+//      ****
+//      ***
+//      **
+//      *
+//      ```
+//    * ✨ *Reinforces decreasing nested loop structure.*
+
+
+// const row = 10;
+ 
+// for (let i = 1; i <= row; i++) {
+//   let str = "";
+//   for (let j = 1; j <= row - i + 1; j++) {
+//     str += "*";
+//   }
+//   console.log(str);
 // }
