@@ -316,7 +316,7 @@
 //    * ✨ *Teaches nested loops and increasing sequence printing.*
 
 // const row = 100;
- 
+
 // for (let i = 1; i <= row; i++) {
 //   let str = "";
 //   for (let j = 1; j <= i; j++) {
@@ -324,8 +324,6 @@
 //   }
 //   console.log(str);
 // }
-
-
 
 // 2. **Print Inverted Right-Angled Triangle**
 
@@ -341,9 +339,8 @@
 //      ```
 //    * ✨ *Reinforces decreasing nested loop structure.*
 
-
 // const row = 10;
- 
+
 // for (let i = 1; i <= row; i++) {
 //   let str = "";
 //   for (let j = 1; j <= row - i + 1; j++) {
@@ -351,3 +348,32 @@
 //   }
 //   console.log(str);
 // }
+
+// 3. **Print Pyramid Pattern**
+
+//    * Input: `Rows = 5`
+//    * Output:
+
+//      ```
+//          *
+//         ***
+//        *****
+//       *******
+//      *********
+//      ```
+//    * ✨ *Teaches alignment using spaces and nested loops.*
+
+//  const row = 6;
+
+// for (let outLoop = 1; outLoop <= row; outLoop++) {
+
+//   // spaces
+//   let spaces = " ".repeat(row - outLoop);
+
+//   // stars
+//   let stars = "*".repeat(2 * outLoop - 1);
+
+//   console.log(spaces + stars);
+// }
+
+
