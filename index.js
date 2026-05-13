@@ -376,4 +376,22 @@
 //   console.log(spaces + stars);
 // }
 
+// another way of pyramid
 
+// const row = 5;
+
+// for (let i = 1; i <= row; i++) {
+//   let str = "";
+
+//   // spaces
+//   for (let j = 1; j <= row - i; j++) {
+//     str += " ";
+//   }
+
+//   // stars
+//   for (let k = 1; k <= 2 * i - 1; k++) {
+//     str += "*";
+//   }
+
+//   console.log(str);
+// }
