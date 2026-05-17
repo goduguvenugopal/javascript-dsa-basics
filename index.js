@@ -411,20 +411,20 @@
 //      ```
  
  
- const rows = 5;
+//  const rows = 5;
 
-for (let i = 0; i < rows; i++) {
-  let str = "";
+// for (let i = 0; i < rows; i++) {
+//   let str = "";
 
-  // spaces
-  for (let j = 0; j < i; j++) {
-    str += " ";
-  }
+//   // spaces
+//   for (let j = 0; j < i; j++) {
+//     str += " ";
+//   }
   
-  // stars
-  for (let k = 0; k < 2 * (rows - i) - 1; k++) {
-    str += "*";
-  }
+//   // stars
+//   for (let k = 0; k < 2 * (rows - i) - 1; k++) {
+//     str += "*";
+//   }
 
-  console.log(str);
-}
+//   console.log(str);
+// }
