@@ -396,7 +396,6 @@
 //   console.log(str);
 // }
 
-
 // 4. **Print Inverted Pyramid Pattern**
 
 //    * Input: `Rows = 5`
@@ -409,8 +408,7 @@
 //         ***
 //          *
 //      ```
- 
- 
+
 //  const rows = 5;
 
 // for (let i = 0; i < rows; i++) {
@@ -420,7 +418,7 @@
 //   for (let j = 0; j < i; j++) {
 //     str += " ";
 //   }
-  
+
 //   // stars
 //   for (let k = 0; k < 2 * (rows - i) - 1; k++) {
 //     str += "*";
@@ -428,3 +426,41 @@
 
 //   console.log(str);
 // }
+
+// 6. **Print Hollow Pyramid Pattern**
+
+//    * Input: `Rows = 5`
+//    * Output:
+
+//      ```
+//          *
+//         * *
+//        *   *
+//       *     *
+//      *********
+
+const rows = 5;
+
+for (let i = 1; i <= rows; i++) {
+  let pattern = "";
+  // spaces
+  for (let j = 1; j <= rows - i; j++) {
+    pattern += " ";
+  }
+  // stars and hollow spaces
+  for (let k = 1; k <= 2 * i - 1; k++) { 
+    // first star OR last star OR last row
+    // if (k === 1 || k === 2 * i - 1 || i === rows) {
+    let firstCon = k === 1;
+    let secondCon = k === 2 * i - 1;
+    let thirdCon = i === rows;
+
+    if (firstCon || secondCon || thirdCon) {
+      pattern += "*";
+    } else {
+      pattern += " ";
+    }
+  }
+
+  console.log(pattern);
+}
