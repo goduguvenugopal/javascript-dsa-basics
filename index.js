@@ -439,28 +439,60 @@
 //       *     *
 //      *********
 
-const rows = 5;
+// const rows = 5;
 
-for (let i = 1; i <= rows; i++) {
-  let pattern = "";
-  // spaces
-  for (let j = 1; j <= rows - i; j++) {
-    pattern += " ";
-  }
-  // stars and hollow spaces
-  for (let k = 1; k <= 2 * i - 1; k++) { 
-    // first star OR last star OR last row
-    // if (k === 1 || k === 2 * i - 1 || i === rows) {
-    let firstCon = k === 1;
-    let secondCon = k === 2 * i - 1;
-    let thirdCon = i === rows;
+// for (let i = 1; i <= rows; i++) {
+//   let pattern = "";
+//   // spaces
+//   for (let j = 1; j <= rows - i; j++) {
+//     pattern += " ";
+//   }
+//   // stars and hollow spaces
+//   for (let k = 1; k <= 2 * i - 1; k++) { 
+//     // first star OR last star OR last row
+//     // if (k === 1 || k === 2 * i - 1 || i === rows) {
+//     let firstCon = k === 1;
+//     let secondCon = k === 2 * i - 1;
+//     let thirdCon = i === rows;
 
-    if (firstCon || secondCon || thirdCon) {
-      pattern += "*";
-    } else {
-      pattern += " ";
+//     if (firstCon || secondCon || thirdCon) {
+//       pattern += "*";
+//     } else {
+//       pattern += " ";
+//     }
+//   }
+
+//   console.log(pattern);
+// }
+
+
+
+// Binary Search 
+
+const targetInput = 5;
+
+const arr = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 17, 18, 20, 22, 34, 50];
+
+function findNumber(arr, targetInput) {
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left <= right) {
+        let middle = Math.floor((left + right) / 2);
+
+        if (arr[middle] === targetInput) {
+            return middle;
+        } else if (arr[middle] < targetInput) {
+            left = middle + 1;
+        } else {
+            right = middle - 1;
+        }
     }
-  }
 
-  console.log(pattern);
+    return -1;
 }
+
+console.log(findNumber(arr, targetInput));
+
+
+
