@@ -448,7 +448,7 @@
 //     pattern += " ";
 //   }
 //   // stars and hollow spaces
-//   for (let k = 1; k <= 2 * i - 1; k++) { 
+//   for (let k = 1; k <= 2 * i - 1; k++) {
 //     // first star OR last star OR last row
 //     // if (k === 1 || k === 2 * i - 1 || i === rows) {
 //     let firstCon = k === 1;
@@ -465,34 +465,35 @@
 //   console.log(pattern);
 // }
 
+// Binary Search
 
-
-// Binary Search 
-
-const targetInput = 5;
+const targetInput = 20;
 
 const arr = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 17, 18, 20, 22, 34, 50];
 
 function findNumber(arr, targetInput) {
-    let left = 0;
-    let right = arr.length - 1;
+  let left = 0;
+  let right = arr.length - 1;
 
-    while (left <= right) {
-        let middle = Math.floor((left + right) / 2);
+  while (left <= right) {
+    let middle = Math.floor(left + right / 2);
+    console.log(
+      "middle index",
+      middle,
+      " : middle index of element",
+      arr[middle],
+    );
 
-        if (arr[middle] === targetInput) {
-            return middle;
-        } else if (arr[middle] < targetInput) {
-            left = middle + 1;
-        } else {
-            right = middle - 1;
-        }
+    if (arr[middle] === targetInput) {
+      return middle;
+    } else if (arr[middle] < targetInput) {
+      left = middle + 1;
+    } else {
+      right = middle - 1;
     }
+  }
 
-    return -1;
+  return -1;
 }
 
 console.log(findNumber(arr, targetInput));
-
-
-
